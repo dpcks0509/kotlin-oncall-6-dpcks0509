@@ -39,9 +39,9 @@ class EmergencyWork(private val month: Int, private val day: String) {
         var firstEmployee = employeesOnWeekDays[0]
 
         if (schedule.size != 0 && schedule[dayOfMonth - 1] == firstEmployee) {
-            val temp = employeesOnWeekDays[0]
+            val duplicateEmployee = employeesOnWeekDays[0]
             employeesOnWeekDays[0] = employeesOnWeekDays[1]
-            employeesOnWeekDays[1] = temp
+            employeesOnWeekDays[1] = duplicateEmployee
         }
 
         firstEmployee = employeesOnWeekDays[0]
@@ -53,9 +53,9 @@ class EmergencyWork(private val month: Int, private val day: String) {
         var firstEmployee = employeesOnWeekendDays[0]
 
         if (schedule.size != 0 && schedule[dayOfMonth - 1] == firstEmployee) {
-            val temp = employeesOnWeekendDays[0]
+            val duplicateEmployee = employeesOnWeekendDays[0]
             employeesOnWeekendDays[0] = employeesOnWeekendDays[1]
-            employeesOnWeekendDays[1] = temp
+            employeesOnWeekendDays[1] = duplicateEmployee
         }
 
         firstEmployee = employeesOnWeekendDays[0]
