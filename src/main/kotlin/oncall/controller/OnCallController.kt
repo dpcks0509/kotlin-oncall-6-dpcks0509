@@ -8,6 +8,6 @@ class OnCallController {
     private val outputView = OutputView()
 
     fun run() {
-
+        val emergencyWork = inputView.readEmergencyWork()
     }
 }
