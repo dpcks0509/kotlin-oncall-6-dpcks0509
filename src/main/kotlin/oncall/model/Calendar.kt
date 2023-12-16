@@ -26,10 +26,10 @@ enum class Calendar(private val month: Int, private val endDay: Int, private val
         }
 
         fun getTypeOfDay(month: Int, day: String, dayOfMonth: Int): Int {
-            val weekDays = listOf(1,2,3,4,5)
-            val weekendDays = listOf(6,0)
+            val weekDays = listOf(0, 1, 2, 3, 4)
+            val weekendDays = listOf(5, 6)
             val holidays = values().first { it.month == month }.holidays
-            val dayOfOrdinal = (getDayOfOrdinal(day) + dayOfMonth) % 7
+            val dayOfOrdinal = (getDayOfOrdinal(day) + dayOfMonth - 1) % 7
             return when {
                 weekDays.contains(dayOfOrdinal) && holidays.contains(dayOfMonth) -> WEEK_DAY_AND_HOLIDAY
                 weekendDays.contains(dayOfOrdinal) -> WEEKEND_DAY

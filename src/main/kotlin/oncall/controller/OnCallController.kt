@@ -12,6 +12,7 @@ class OnCallController {
         val emergencyWork = inputView.readEmergencyWorkMonthAndDay()
         readEmployees(emergencyWork)
         emergencyWork.generateSchedule()
+        outputView.printEmergencyWorkSchedule(emergencyWork)
     }
 
     private fun readEmployees(emergencyWork: EmergencyWork) {

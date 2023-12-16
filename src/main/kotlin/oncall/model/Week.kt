@@ -17,5 +17,9 @@ enum class Week(val day: String) {
         fun getDayOfOrdinal(day: String): Int {
             return values().first { it.day == day }.ordinal
         }
+
+        fun getDayByOrdinal(ordinal: Int): String {
+            return values().first { it.ordinal == ordinal }.day
+        }
     }
 }

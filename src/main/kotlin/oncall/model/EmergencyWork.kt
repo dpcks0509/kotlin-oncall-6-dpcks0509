@@ -63,7 +63,7 @@ class EmergencyWork(private val month: Int, private val day: String) {
         schedule[dayOfMonth] = firstEmployee
     }
 
-    fun getEmployeesOnWeekDays() = employeesOnWeekDays
-    fun getEmployeesOnWeekendDays() = employeesOnWeekendDays
+    fun getMonth() = month
+    fun getDay() = day
     fun getSchedule() = schedule
 }
