@@ -2,8 +2,8 @@ package oncall.utils
 
 import oncall.model.EmergencyWork
 import oncall.model.Week.Companion.isDayExists
-import oncall.utils.Constants.DECEMBER
-import oncall.utils.Constants.JANUARY
+import oncall.utils.Constants.DECEMBER_NUMBER
+import oncall.utils.Constants.JANUARY_NUMBER
 import oncall.utils.Constants.MAX_EMPLOYEES_SIZE
 import oncall.utils.Constants.MAX_EMPLOYEE_NAME_LENGTH
 import oncall.utils.Constants.MIN_EMPLOYEES_SIZE
@@ -23,7 +23,7 @@ object Validator {
 
     private fun validateEmergencyWorkMonth(month: String): Int {
         val validMonth = month.toIntOrNull() ?: 0
-        require(validMonth in JANUARY..DECEMBER) { Exception.INVALID_INPUT_VALUE.getMessage() }
+        require(validMonth in JANUARY_NUMBER..DECEMBER_NUMBER) { Exception.INVALID_INPUT_VALUE.getMessage() }
         return validMonth
     }
 
