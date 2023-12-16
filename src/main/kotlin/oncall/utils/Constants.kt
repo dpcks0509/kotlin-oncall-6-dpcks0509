@@ -11,4 +11,5 @@ object Constants {
     const val HOLIDAY = 3
     const val WEEK_DAY_AND_HOLIDAY = 4
     const val START_DAY = 1
+    const val NUMBER_OF_DAY = 7
 }
