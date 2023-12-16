@@ -14,7 +14,7 @@ class OutputView {
         val endDay = getEndDay(month)
         for (dayOfMonth in 1..endDay) {
             var day = getDayByOrdinal((getDayOfOrdinal(emergencyWork.getDay()) + dayOfMonth - 1) % NUMBER_OF_DAY)
-            if (getTypeOfDay(month, day, dayOfMonth) == WEEK_DAY_AND_HOLIDAY) day = "${day}(휴일)"
+            if (getTypeOfDay(month, emergencyWork.getDay(), dayOfMonth) == WEEK_DAY_AND_HOLIDAY) day = "${day}(휴일)"
             println("${month}월 ${dayOfMonth}일 $day ${emergencyWork.getSchedule()[dayOfMonth]}")
         }
     }
